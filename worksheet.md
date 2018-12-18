@@ -65,6 +65,8 @@ The functionality will then be divided into two separate lists: MPV and PostMVP.
 
 -Have bad guys shoot?
 
+-Have landing page as a modal
+
 ## Functional Components
 
 Based on the initial logic defined in the previous sections try and breakdown the logic further into functional components, and by that we mean functions.  Try and capture what logic would need to be defined if the game was broken down into the following categories.
