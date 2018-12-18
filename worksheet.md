@@ -25,7 +25,7 @@ In this game, you're a happy faced, positive person who is trying to get across 
 
 ## Wireframes
 
-https://cloudinary.com/console/media_library/folders/all/Wireframes
+https://cloudinary.com/console/media_library/asset/manage/summary/image/upload/Wireframes%2FWireframe%20Storyboard
 
 ## Priority Matrix
 
