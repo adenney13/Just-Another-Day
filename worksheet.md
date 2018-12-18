@@ -47,9 +47,9 @@ The functionality will then be divided into two separate lists: MPV and PostMVP.
 
 -Have user move character across plane left to right
 
--Player wins if they make their character across the field and touch the target
+-User wins if they make their character across the field and touch the target
 
--Player loses if a sad face touches them
+-User loses if a sad face touches them
 
 -Alert for a win or a loss
 
@@ -70,6 +70,8 @@ The functionality will then be divided into two separate lists: MPV and PostMVP.
 -Have bad guys shoot?
 
 -Have landing page as a modal
+
+-More intricate/beautiful design for user/bad guys
 
 ## Functional Components
 
