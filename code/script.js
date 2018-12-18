@@ -9,10 +9,10 @@ const smileFace = {
 
 //place bad guys
 const sadGuys = [
-	{ x: 9, y: 0},
-	{ x: 9, y: 1},
-	{ x: 9, y: 2},
-	{ x: 9, y: 3}
+	{ x: 5, y: 0},
+	{ x: 2, y: 1},
+	{ x: 7, y: 2},
+	{ x: 4, y: 3}
 ];
 
 //place home
@@ -69,6 +69,13 @@ const canMoveTo = (x,y) => {
 	return true
 }
 
+// const checkForWin = function(x,y) {
+// 	if (smileFace.x === targets.x && smileFace.y === targets.y) {
+// 		alert("WIN!");
+// 	}
+// }
+
+
 // Assign keys to movement of smileFace
 let moveSmileFaceTo = (x,y) => {
 	$smileFace.style.left = (x*100).toString() + "px";
@@ -76,7 +83,8 @@ let moveSmileFaceTo = (x,y) => {
 	// if (getIndexOfTarget(x,y)<0) return;
 	// if (getIndexOfTarget(x,y)>=0) {
 	// 	removePlantAt(getIndexOfPlantAt(x,y))
-		// checkForWin()
+	// checkForWin();
+	// console.log(checkForWin());
 	};
 
 const moveLeft = function () {
@@ -121,7 +129,8 @@ document.body.addEventListener('keydown', evnt => {
 			moveDown();
 			break;
 	}
-})
+});
+
 
 
 //run the game
@@ -129,5 +138,5 @@ function runGame() {
 	renderSadGuys();
 	renderTarget();
 }
-
-runGame()
+	
+runGame();
