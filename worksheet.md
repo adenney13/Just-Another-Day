@@ -10,7 +10,7 @@ You are **responsible** for scheduling time with your squad to seek approval for
 |---|---| ---|
 |Dec 17th| Project Description | Complete
 |Dec 17th| Wireframes / Priority Matrix / Functional Components | Complete
-|Dec 18th| Core Application Structure (HTML, CSS, etc.) | Incomplete
+|Dec 17th| Core Application Structure (HTML, CSS, etc.) | Complete
 |Dec 18th| Pseudocode / actual code | Incomplete
 |Dec 18th| Initial Clickable Model  | Incomplete
 |Dec 19th| MVP | Incomplete
