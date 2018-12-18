@@ -42,21 +42,92 @@ function renderTarget() {
 	};
 };
 
+const isCoordinateInGrid = function (x,y) {
+	if(x <0 || y < 0 || x > 10 || y > 3) {
+		return false
+	} else {
+		return true
+	}
+}
 
-document.body.addEventListener('keystroke', evnt =>{
+const isThereASadGuy = function (x, y) {
+	for (let sadGuy of sadGuys) {
+		if(sadGuy.x === x && sadGuy.y === y){
+			return true
+		}
+	}		return false
+}
+
+
+
+
+const canMoveTo = (x,y) => {
+	if (!isCoordinateInGrid(x,y)){
+		return false};
+	if (isThereASadGuy(x,y)){
+		return false};
+	return true
+}
+
+// Assign keys to movement of smileFace
+let moveSmileFaceTo = (x,y) => {
+	$smileFace.style.left = (x*100).toString() + "px";
+	$smileFace.style.top = (y*100).toString() + "px";
+	// if (getIndexOfTarget(x,y)<0) return;
+	// if (getIndexOfTarget(x,y)>=0) {
+	// 	removePlantAt(getIndexOfPlantAt(x,y))
+		// checkForWin()
+	};
+
+const moveLeft = function () {
+	if (canMoveTo(smileFace.x -1, smileFace.y)){
+		smileFace.x -= 1}
+		moveSmileFaceTo(smileFace.x, smileFace.y)
+	}
+
+const moveUp = function () {
+	if (canMoveTo(smileFace.x, smileFace.y - 1)){
+		smileFace.y -= 1}
+		moveSmileFaceTo(smileFace.x, smileFace.y)
+	}
+const moveRight = function () {
+	if (canMoveTo(smileFace.x +1, smileFace.y)){
+		smileFace.x += 1}
+		moveSmileFaceTo(smileFace.x, smileFace.y)
+	}
+
+const moveDown = function () {
+	if (canMoveTo(smileFace.x, smileFace.y +1)){
+		smileFace.y += 1}
+		moveSmileFaceTo(smileFace.x, smileFace.y)
+	}
+
+document.body.addEventListener('keydown', evnt => {
 	const numKey = evnt.keyCode;
-	if ([37, 38, 39, 40].includes(numKey)){
+	if ([37, 38, 39, 40].includes(numKey)) {
 		evnt.preventDefault();
+	}
+	switch(numKey) {
+		case 37:
+			moveLeft();
+			break;
+		case 38:
+			moveUp();
+			break;
+		case 39:
+			moveRight();
+			break;
+		case 40:
+			moveDown();
+			break;
 	}
 })
 
 
-
-renderTarget();
-
+//run the game
 function runGame() {
 	renderSadGuys();
-	
+	renderTarget();
 }
 
 runGame()
