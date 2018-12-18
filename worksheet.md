@@ -37,6 +37,8 @@ The functionality will then be divided into two separate lists: MPV and PostMVP.
 
 #### MVP 
 
+--Create landing page
+
 -Generate field
 
 -Generate user and sad face characters
@@ -52,6 +54,8 @@ The functionality will then be divided into two separate lists: MPV and PostMVP.
 -Alert for a win or a loss
 
 -Reset
+
+
 
 
 
