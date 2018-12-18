@@ -43,7 +43,7 @@ The functionality will then be divided into two separate lists: MPV and PostMVP.
 
 -Generate user and sad face characters
 
--Have sad face characters move across the plane left to right
+-Have sad face characters move across the plane right to left
 
 -Have user move character across plane left to right
 
