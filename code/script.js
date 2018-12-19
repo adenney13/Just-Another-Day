@@ -1,6 +1,7 @@
 // build out game board and characters
 const $gameField = document.querySelector(".gamefield");
 const $smileFace = document.querySelector(".smileface");
+// const $sadFace = document.querySelector(".sadface")
 
 //placeYOU
 const smileFace = {
@@ -11,7 +12,7 @@ const smileFace = {
 const sadGuys = [
 	{ x: 9, y: 0},
 	{ x: 9, y: 1},
-	{ x: 7, y: 2},
+	{ x: 9, y: 2},
 	{ x: 9, y: 3}
 ];
 
@@ -20,22 +21,91 @@ const targets = [
 	{x: 10, y: 2},
 ];
 
+let pos1 = 9;
+
+let shuffledSadGuys = shuffle(sadGuys);
 //build bad guys 
 function renderSadGuys(){
-	for (let sadGuy of sadGuys){
+	// for (let sadGuy of sadGuys){
+
+	for (let i = 0; i < shuffledSadGuys.length; i++) {
 		const div = document.createElement("div");
 		div.classList.add('sadface');
-		div.style.top = (sadGuy.y * 100).toString() + 'px';
-		div.style.left = (sadGuy.x * 100).toString() + 'px';
+		div.style.top = (shuffledSadGuys[i].y * 100).toString() + 'px';
+		div.style.left = (shuffledSadGuys[i].x * 100).toString() + 'px';
 		$gameField.appendChild(div);
-	};
-	// let sadGuyMove = function(sadGuy) {
-	// 	div.style.left = Math.random() * window.innerWidth + 'px';
- //    	div.style.top = Math.random() * window.innerHeight + 'px';
-	// }
-	//  setInterval(function() {
- //    sadGuyMove()}, 1000);
-};
+
+
+		function sadGuyMove() {
+			if (shuffledSadGuys[i].x > 0) {
+				div.style.left = ((shuffledSadGuys[i].x -=1) * 100).toString() + 'px';
+			}
+			else {
+				div.style.left = '0px';
+			}
+
+		}
+
+		setInterval(sadGuyMove, Math.floor(Math.random() * Math.floor(3000)));
+
+	}
+		// function sadGuyStop() {
+		// 	div.style.left= '0px';
+
+		// }
+		
+			// function frame() {
+			// if (getIndexOfSadGuy(sadGuys.x) === 0 + "px"){
+			// 	sadGuyStop();
+			// }
+	
+
+	
+      	
+ }; 
+
+ function shuffle(arr) {
+ 	return arr.sort(() => 0.5 - Math.random());
+ }
+
+ // let sadGuyStarts = setInterval(() => {
+	// 		let stop = false;
+	// 		while (pos1 > 0 && stop === false) {
+	// 			pos1--;
+	// 			let bad = document.getElementsByClassName('sadface');
+	// 			for (let i; i < bad.length; i++) {
+	// 				bad[i].style.left = '-100px';
+	// 			}
+	// 			// sadGuys.x = pos1;
+	// 			// document.querySelectorAll(".sadface").style.left = `${sadGuys.x}px`;
+		
+	// 			// if (pos1 === 0) {
+	// 			// 	stop = true;
+	// 			// 	document.querySelectorAll(".sadface").style.left = `${sadGuys.x}px`;
+	// 			// }
+
+	// 		}
+	// 	}, 500); 	
+	
+// };
+
+
+
+
+  // let elem = document.querySelector(".sadface");   
+ 	
+  // let id = setInterval(frame()) 
+  //   if (pos == 0) {
+  //     clearInterval(id);
+  //   } else {
+  //     pos++; 
+  //     elem.style.top = (sadGuys[0].y - pos) + "px";
+  //     elem.style.left = (sadGuys[0].x - pos) + "px"; 
+  //   } 1000;
+  // }
+
+
+
 
 //build home
 function renderTarget() {
@@ -63,6 +133,10 @@ const isCoordinateInGrid = function (x,y) {
 // 		}
 // 	}		return false
 // }
+
+const getIndexOfSadGuy = (x) => {
+	return sadGuys.findIndex(sadGuy => sadGuy.x === x);
+}
 
 const canMoveTo = (x,y) => {
 	if (isCoordinateInGrid(x,y)){
@@ -107,12 +181,12 @@ let moveSmileFaceTo = (x,y) => {
 	console.log(`Character moved to ${x}, ${y}`)
 	$smileFace.style.left = (x*100).toString() + "px";
 	$smileFace.style.top = (y*100).toString() + "px";
-	// if (getIndexOfTarget(x,y)<0) return;
-	// if (getIndexOfTarget(x,y)>=0) {
+	
+	// if (getIndexOfSadGuy(x,y)>=0) {
 	// 	removePlantAt(getIndexOfPlantAt(x,y))
 	checkForWin();
-	checkForLoss();
-	console.log(checkForLoss(), 'moveSMileFaceTo');
+	// checkForLoss();}
+	// console.log(checkForLoss(), 'moveSMileFaceTo');
 	};
 
 const moveLeft = function () {
@@ -165,6 +239,7 @@ document.body.addEventListener('keydown', evnt => {
 function runGame() {
 	renderSadGuys();
 	renderTarget();
+	// sadGuyMove();
 }
 	
 runGame()

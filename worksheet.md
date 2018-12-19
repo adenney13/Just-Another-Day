@@ -123,7 +123,7 @@ Time frames are also key in the development cycle.  You have limited time to cod
 | --- | :---: |  :---: | :---: | :---: |
 | Building characters/board game| H | 3hrs| 1.5hrs | 1.5hrs|
 | Create User Movement Set Collision Detection with Sad Guys/Target| H | 3hrs| 4.75hrs | 3.25hrs |
-| Automate Sad Guys| H | 2hrs| N/A | N/A |
+| Automate Sad Guys| H | 2hrs| 11.75hrs | 7hrs |
 | Win Logic| H | 3hrs| N/A | N/A |
 | Build Alert Win/Lose Alert Pop-Ups| M | 3hrs| N/A | N/A|
 | Total | H | 18hrs| N/A | N/A |
