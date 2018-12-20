@@ -21,8 +21,6 @@ const targets = [
 	{x: 10, y: 2},
 ];
 
-let pos1 = 9;
-
 let shuffledSadGuys = shuffle(sadGuys);
 //build bad guys 
 function renderSadGuys(){
@@ -41,14 +39,18 @@ function renderSadGuys(){
 				div.style.left = ((shuffledSadGuys[i].x -=1) * 100).toString() + 'px';
 			}
 			else {
+				checkForLoss();	
 				div.style.left = '0px';
 			}
+			
 
 		}
 
 		setInterval(sadGuyMove, Math.floor(Math.random() * Math.floor(3000)));
 
 	}
+
+
 		// function sadGuyStop() {
 		// 	div.style.left= '0px';
 
@@ -150,7 +152,7 @@ const canMoveTo = (x,y) => {
 const checkForWin = function() {
 	for (let target of targets) {
 		if (smileFace.x === target.x && smileFace.y === target.y) {
-		alert("WIN!");
+			window.location.href = "./winpage.html";
 		}
 	}
 }
@@ -158,7 +160,7 @@ const checkForWin = function() {
 const checkForLoss = function () {
 	for (let sadGuy of sadGuys) {
 		if(smileFace.x === sadGuy.x && smileFace.y === sadGuy.y) {
-			alert("DEAD");
+			window.location.href = "./losepage.html";
 		}
 	}
 }
@@ -185,7 +187,7 @@ let moveSmileFaceTo = (x,y) => {
 	// if (getIndexOfSadGuy(x,y)>=0) {
 	// 	removePlantAt(getIndexOfPlantAt(x,y))
 	checkForWin();
-	// checkForLoss();}
+	checkForLoss();
 	// console.log(checkForLoss(), 'moveSMileFaceTo');
 	};
 
