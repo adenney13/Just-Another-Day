@@ -16,21 +16,21 @@ const targets = [
 	{x: 10, y: 2},
 ];
 
-let shuffledSadGuys = shuffle(sadGuys);
+
 
 function renderSadGuys(){
 
-	for (let i = 0; i < shuffledSadGuys.length; i++) {
+	for (let i = 0; i < sadGuys.length; i++) {
 		const div = document.createElement("div");
 		div.classList.add('sadface');
-		div.style.top = (shuffledSadGuys[i].y * 100).toString() + 'px';
-		div.style.left = (shuffledSadGuys[i].x * 100).toString() + 'px';
+		div.style.top = (sadGuys[i].y * 100).toString() + 'px';
+		div.style.left = (sadGuys[i].x * 100).toString() + 'px';
 		$gameField.appendChild(div);
 
-		
+
 		function sadGuyMove() {
-			if (shuffledSadGuys[i].x > 0) {
-				div.style.left = ((shuffledSadGuys[i].x -=1) * 100).toString() + 'px';
+			if (sadGuys[i].x > 0) {
+				div.style.left = ((sadGuys[i].x -=1) * 100).toString() + 'px';
 			}
 			else {
 				checkForLoss();	
@@ -41,10 +41,6 @@ function renderSadGuys(){
 		setInterval(sadGuyMove, Math.floor(Math.random() * Math.floor(3000)));
 	}
 }; 
-
-function shuffle(arr) {
- 	return arr.sort(() => .5 - Math.random());
-};
 
 function renderTarget() {
 	for (let target of targets) {
