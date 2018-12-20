@@ -27,7 +27,7 @@ function renderSadGuys(){
 		div.style.left = (shuffledSadGuys[i].x * 100).toString() + 'px';
 		$gameField.appendChild(div);
 
-
+		
 		function sadGuyMove() {
 			if (shuffledSadGuys[i].x > 0) {
 				div.style.left = ((shuffledSadGuys[i].x -=1) * 100).toString() + 'px';
@@ -37,7 +37,7 @@ function renderSadGuys(){
 				div.style.left = '0px';
 			}
 		}
-
+		checkForLoss();	
 		setInterval(sadGuyMove, Math.floor(Math.random() * Math.floor(3000)));
 	}
 }; 
