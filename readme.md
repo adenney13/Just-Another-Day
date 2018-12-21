@@ -2,6 +2,7 @@
 
 ## Just Another Day!
 
+<img src="./assets/Images/coolFace.png" height="350px" width="350px">
 
 #### Quick Video of the Game
 
