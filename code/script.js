@@ -17,6 +17,8 @@ const targets = [
 ];
 
 
+// https://wakeful-baritone.glitch.me/
+// Did a lot of messing around with the Blerf code
 
 function renderSadGuys(){
 
