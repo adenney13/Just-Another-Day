@@ -134,8 +134,7 @@ Helper functions should be generic enought that they can be reused in other appl
 
 | Function | Description | 
 | --- | :---: |  
-| setInterval(sadGuyMove, Math.floor(Math.random() * Math.floor(3000)));
-	} | randomizes start times
+| setInterval(sadGuyMove, Math.floor(Math.random() * Math.floor(3000))); | randomizes start times
 
 const checkForLoss = function () {
 	for (let sadGuy of sadGuys) {
