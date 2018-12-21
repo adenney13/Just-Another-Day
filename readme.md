@@ -28,6 +28,10 @@ For this game, I used HTML, CSS, and JavaScript.
 
 https://cloudinary.com/console/media_library/folders/all/Wireframes
 
+#### Project Overview
+
+https://git.generalassemb.ly/adenney13/Just-Another-Day/blob/master/worksheet.md
+
 #### Continued Challenges
 
 I would like to make a second level. Also, the way that I built out the gameboard and the characters, the responsiveness is slightly off on a mobile device. Will need to work on that the next few weeks.
