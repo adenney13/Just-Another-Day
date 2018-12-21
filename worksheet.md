@@ -134,12 +134,8 @@ Helper functions should be generic enought that they can be reused in other appl
 
 | Function | Description | 
 | --- | :---: |  
-| setInterval(sadGuyMove, Math.floor(Math.random() * Math.floor(3000))); | randomizes start times
-
-const checkForLoss = function () {
-	for (let sadGuy of sadGuys) {
-		if(smileFace.x === sadGuy.x && smileFace.y === sadGuy.y) {
-			window.location.href = "./losepage.html";}}} | this will send you to another page once something is met. collision detection in this case.
+| setInterval(sadGuyMove, Math.floor(Math.random() * Math.floor(3000))); | randomizes start times | 
+const checkForLoss = function () for (let sadGuy of sadGuys) {if(smileFace.x === sadGuy.x && smileFace.y === sadGuy.y) {window.location.href = "./losepage.html";}}} | this will send you to another page once something is met. collision detection in this case.
 
 ## Additional Libraries
  Use this section to list all supporting libraries and thier role in the project. 
