@@ -12,7 +12,7 @@ https://vimeo.com/307697878
 Don't let the haters get you down! 
 
 Make your way home while avoiding the sad nay-sayers and bullies.
-In this game, you're a happy faced, positive person who is trying to get across a field of sad faced, bullies who just want to bring you down with them. Get across the field and weave in and out of the crowd to get home at the end of the field. Think of it as Frogger and Plants vs Zombies.
+In this game, you're a happy faced, positive person who is trying to get across a field of sad faced, bullies who just want to bring you down with them. Use the arrow keys to get your smiley face across the field and weave in and out of the crowd to get home at the end of the field. Think of it as Frogger and Plants vs Zombies.
 
 
 #### Link to Play the Game!
