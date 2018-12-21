@@ -3,11 +3,11 @@
 ## Just Another Day!
 
 
-##Quick Video of the Game
+#### Quick Video of the Game
 
 https://vimeo.com/307697878
 
-##Overview of the Game
+####Overview of the Game
 
 Don't let the haters get you down! 
 
