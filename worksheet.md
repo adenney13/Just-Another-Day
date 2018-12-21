@@ -4,7 +4,6 @@
 
 https://vimeo.com/307697878
 
-
 ## Project Schedule
 
 This schedule will be used to keep track of your progress throughout the week and align with our expectations.  
@@ -18,7 +17,7 @@ You are **responsible** for scheduling time with your squad to seek approval for
 |Dec 17th| Core Application Structure (HTML, CSS, etc.) | Complete
 |Dec 18th| Pseudocode / actual code | Complete
 |Dec 18th| Initial Clickable Model  | Complete
-|Dec 19th| MVP | Complete
+|Dec 20th| MVP | Complete
 |Dec 20th| Post MVP | Incomplete
 |Dec 21st| Present | Incomplete
 
