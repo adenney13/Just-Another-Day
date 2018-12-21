@@ -150,13 +150,3 @@ setInterval(sadGuyMove, Math.floor(Math.random() * Math.floor(3000)));
 
 	So I was with my tutor and another cohort student trying to figure out how to get my Sad Guys to start at random intervals not just overall but FROM EACH OTHER. So after an hour or so of trying to go through keyframes and brainstorming, I look down and say why don't we just pump a math random into the set interval since this is in the same loop!? Sure enough, it works.
 ```
-
-## Change Log
- Use this section to document what changes were made and the reasoning behind those changes.  
-
-## Issues and Resolutions
- Use this section to list of all major issues encountered and their resolution.
-
-#### SAMPLE.....
-**ERROR**: app.js:34 Uncaught SyntaxError: Unexpected identifier                                
-**RESOLUTION**: Missing comma after first object in sources {} object
