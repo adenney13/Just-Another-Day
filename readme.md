@@ -1,6 +1,9 @@
 # ![](https://ga-dash.s3.amazonaws.com/production/assets/logo-9f88ae6c9c3871690e33280fcf557f33.png) Just Another Day!
 
-## Quick Video Tutorial of the Game
+## Just Another Day!
+
+
+##Quick Video of the Game
 
 https://vimeo.com/307697878
 
