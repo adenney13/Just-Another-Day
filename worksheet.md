@@ -11,9 +11,9 @@ You are **responsible** for scheduling time with your squad to seek approval for
 |Dec 17th| Project Description | Complete
 |Dec 17th| Wireframes / Priority Matrix / Functional Components | Complete
 |Dec 17th| Core Application Structure (HTML, CSS, etc.) | Complete
-|Dec 18th| Pseudocode / actual code | Incomplete
-|Dec 18th| Initial Clickable Model  | Incomplete
-|Dec 19th| MVP | Incomplete
+|Dec 18th| Pseudocode / actual code | Complete
+|Dec 18th| Initial Clickable Model  | Complete
+|Dec 19th| MVP | Complete
 |Dec 20th| Post MVP | Incomplete
 |Dec 21st| Present | Incomplete
 
@@ -21,7 +21,7 @@ You are **responsible** for scheduling time with your squad to seek approval for
 ## Project Description
 
 Don't let the haters get you down! Make your way home while avoiding the sad nay-sayers and bullies.
-In this game, you're a happy faced, positive person who is trying to get across a field of sad faced, bullies who just want to bring you down with them. Get across the field and weave in and out of the crowd to get to the target at the end. Think of it as Frogger and Plants vs Zombies.
+In this game, you're a happy faced, positive person who is trying to get across a field of sad faced, bullies who just want to bring you down with them. Get across the field and weave in and out of the crowd to get home at the end of the field. Think of it as Frogger and Plants vs Zombies.
 
 ## Wireframes
 
@@ -55,7 +55,7 @@ The functionality will then be divided into two separate lists: MPV and PostMVP.
 
 -Reset
 
-
+-Have sad faces move at different speeds
 
 
 
@@ -65,13 +65,13 @@ The functionality will then be divided into two separate lists: MPV and PostMVP.
 
 -Level 2 with more sad faces
 
--Have sad faces move at different speeds
 
 -Have bad guys shoot?
 
 -Have landing page as a modal
 
 -More intricate/beautiful design for user/bad guys
+
 
 ## Functional Components
 
@@ -124,16 +124,23 @@ Time frames are also key in the development cycle.  You have limited time to cod
 | Building characters/board game| H | 3hrs| 1.5hrs | 1.5hrs|
 | Create User Movement Set Collision Detection with Sad Guys/Target| H | 3hrs| 4.75hrs | 3.25hrs |
 | Automate Sad Guys| H | 2hrs| 11.75hrs | 7hrs |
-| Win Logic| H | 3hrs| N/A | N/A |
-| Build Alert Win/Lose Alert Pop-Ups| M | 3hrs| N/A | N/A|
-| Total | H | 18hrs| N/A | N/A |
+| Styling| H | 3hrs| 12.75hrs | 1hr |
+| Landing Page| H | 1 hrs | 14.25hrs | 1.5hrs|
+| Build Alert Win/Lose Alert Pop-Ups| M | 3hrs| 18.25hrs | 4hrs|
+| Total | H | 18hrs| 18.25hrs | 18.25hrs|
 
 ## Helper Functions
 Helper functions should be generic enought that they can be reused in other applications. Use this section to document all helper functions that fall into this category.
 
 | Function | Description | 
 | --- | :---: |  
-| Capitalize | This will capitalize the first letter in a string of text | 
+| setInterval(sadGuyMove, Math.floor(Math.random() * Math.floor(3000)));
+	} | randomizes start times
+
+const checkForLoss = function () {
+	for (let sadGuy of sadGuys) {
+		if(smileFace.x === sadGuy.x && smileFace.y === sadGuy.y) {
+			window.location.href = "./losepage.html";}}} | this will send you to another page once something is met. collision detection in this case.
 
 ## Additional Libraries
  Use this section to list all supporting libraries and thier role in the project. 
@@ -143,9 +150,10 @@ Helper functions should be generic enought that they can be reused in other appl
 Use this section to include a brief code snippet of functionality that you are proud of an a brief description  
 
 ```
-function reverse(string) {
-	// here is the code to reverse a string of text
-}
+setInterval(sadGuyMove, Math.floor(Math.random() * Math.floor(3000)));
+	}
+
+	So I was with my tutor and another cohort student trying to figure out how to get my Sad Guys to start at random intervals not just overall but FROM EACH OTHER. So after an hour or so of trying to go through keyframes and brainstorming, I look down and say why don't we just pump a math random into the set interval since this is in the same loop!? Sure enough, it works.
 ```
 
 ## Change Log
